@@ -1,0 +1,3 @@
+findHappinestNumber(input): Takes a string consisting of non-negative integers separated by commas as input. The function will then find and return the "Happiest number" in the string. "Happy number" is a prime number, and the sum of its digits is a power of base 2. "Happiest number" is the "Happy number" with the largest sum of digits. If there is more than one "Happy number" with the largest sum of digits, the "Happiest number" will be the largest number. If there is no "Happy number", the "Happiest number" is 0.
+"13,89,53,45,67" -> 53
+"0,1,243,6434,96232,0" -> 0
