@@ -5,22 +5,10 @@ maximizeHappiestScore(input): takes a string, rearranges the string's characters
     "abc" -> ["abc", "acb", "bac", "bca", "cab", "cba"]
     calculateLargestHappiestScore(input): take a list of permutations of the string, returns the largest "Happiest score" and the corresponding vowel cluster.
     ["abc", "acb", "bac", "bca", "cab", "cba"] -> {"a": 97}
-    ["aeiou"] -> {"aeiou": 545}
+    ["aeiou"] -> {"aeiou": 531}
         getListOfVowelClusters(input): takes a string, returns a list of all vowel clusters in the string.
         "abcde" -> ["a", "e"]
         "aeiou" -> ["aeiou"]
-        calculateHappiestScore(input): takes a list of vowel clusters, returns the "Happiest score" and the corresponding vowel cluster. "Happiest score" must be a "Happy number" and have the greatest sum of digits. If there is more than one "Happy number" with the largest sum of digits, the "Happiest number" will be the largest number.
+        findHappinestNumber(input): takes a list of vowel clusters, returns the "Happiest score" and the corresponding vowel cluster. "Happiness score" is the sum of all ASCII values of characters in vowel cluster. You can use built-in ord() to convert a char to ascii value.  "Happiness score" can be "Happy number" or not. "Happy number" is a prime number, and the sum of its digits is a power of base 2. "Happiest number" is the "Happy number" with the largest sum of digits. If there is more than one "Happy number" with the largest sum of digits, the "Happiest number" will be the largest number. If there is no "Happy number", the "Happiest number" is 0.
         ["a", "e"] -> {"a": 97}
-        ["aeiou"] -> {"aeiou": 545}
-            computeHappinessScore(input): takes a list of strings, returns the dictionary whose each elements is the sum of the ASCII codes of the characters in a string. "Happiness score" can be "Happy number" or not.
-            ["a", "e"] -> {"a": 97, "e": 101}
-            ["aeiou"] -> {"aeiou": 545}
-            findHappyNumber(input): takes a list of integers, returns the list of "Happy number". "Happy number" is a prime number and the sum of its digits is a power of base 2. 
-            [97, 101] -> [101]
-            [545] -> []
-                isPrime(input): takes an integer, returns True if the number is a prime number, False otherwise.
-                101 -> True
-                545 -> False
-                isSumPowerOfTwo(input): takes an integer, returns True if the sum of the digits of the number is a power of base 2, False otherwise.
-                101 -> True
-                545 -> False
+        ["aeiou"] -> {"aeiou": 531}
