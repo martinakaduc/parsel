@@ -97,7 +97,7 @@ class Function:
     def get_implementation_strs(self):
         def join_str(strs):
             return "\n".join(strs)
-        impl = [CONSTS["impl_helper"].format(
+        impl = [self.prefix + CONSTS["impl_helper"].format(
             impls=join_str(impl),
             asserts=join_str([
                 CONSTS["assert_helper"](cur_assert) for cur_assert in self.asserts]),

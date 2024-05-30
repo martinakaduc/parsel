@@ -624,7 +624,7 @@ def parsel(codegen, source_file, target_file=None, allow_autofill=False, should_
     # And add the header to each function
     _, defined_fns = get_graph(program)
     for fn in defined_fns.values():
-        fn.prefix = "\n".join(header)
+        fn.prefix = "".join(header)
 
     # Compile the graph into a target language
     defined_fns = parsel_graph(defined_fns, codegen, allow_autofill, should_expand, debug, num_completions=num_completions)
