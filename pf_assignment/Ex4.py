@@ -135,8 +135,10 @@ def maximizeHappiestScore(input: str) -> str:
                 happiest_string = sorted([cluster for cluster in vowel_clusters if sum(ord(char) for char in cluster) == happiest_score], key=lambda x: (-len(x), -ord(x[0])))[-1]
     if happiest_score == 0:
         return "Happiest String:  - Happiest Score: 0 (Unhappy)"
-    else:
+    elif happiest_score > 100:
         return f"Happiest String: {''.join(sorted(happiest_string))} - Happiest Score: {happiest_score} (Happy)"
+    else:
+        return f"Happiest String: {''.join(sorted(happiest_string))} - Happiest Score: {happiest_score} (Unhappy)"
 
 assert repr(str(maximizeHappiestScore("aeiou "))) == repr(str("Happiest String: e - Happiest Score: 101 (Happy)")) or (maximizeHappiestScore("aeiou ") == "Happiest String: e - Happiest Score: 101 (Happy)")
 assert repr(str(maximizeHappiestScore("a e"))) == repr(str("Happiest String: e - Happiest Score: 101 (Happy)")) or (maximizeHappiestScore("a e") == "Happiest String: e - Happiest Score: 101 (Happy)")

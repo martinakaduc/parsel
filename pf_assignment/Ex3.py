@@ -35,7 +35,7 @@ def is_happy(num: int) -> bool:
         seen.add(num)
 
 def findHappinestNumber(input: str) -> int:
-    nums = [int(num) for num in input.split(",")]
+    nums = [int(num) for num in input.split(",") if num != ""]
     happiest_num = 0
     happiest_num_sum = 0
     for num in nums:
@@ -43,6 +43,8 @@ def findHappinestNumber(input: str) -> int:
             if sum(int(i) for i in str(num)) > happiest_num_sum:
                 happiest_num = num
                 happiest_num_sum = sum(int(i) for i in str(num))
+            elif sum(int(i) for i in str(num)) == happiest_num_sum:
+                happiest_num = max(happiest_num, num)
     return happiest_num
 
 assert repr(str(findHappinestNumber("13,89,53,45,67"))) == repr(str(53)) or (findHappinestNumber("13,89,53,45,67") == 53)
